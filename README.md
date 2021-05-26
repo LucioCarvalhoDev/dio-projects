@@ -1,0 +1,2 @@
+Esse repositorio organiza meus projetos desenvolvidos para os cursos da plataforma de estudo [Digital Inovation One](https://digitalinnovation.one/).
+Cada pasta é referente a um curso, especificado no respectivo README.
