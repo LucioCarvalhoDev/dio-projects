@@ -1,0 +1,8 @@
+:root {
+    --red: #E50914;
+    --black: #141414;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,29 @@
+.h {
+    background: var(--black);
+    height: 3.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.h_logo {
+    color: var(--red);
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.h_nav {
+    color: #AAA;
+    font-family: 'Roboto';
+}
+
+.h_nav_list {
+    display: flex;
+}
+
+.h_nav_list_link {
+    margin-left: 9px
+}
