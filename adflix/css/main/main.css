@@ -5,6 +5,7 @@
 .m_banner {
     position: relative;
     background: url('./../../assets/img/banner-coke-min.jpg');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
@@ -31,7 +32,8 @@
 }
 
 .m_banner_text_title {
-    font-size: 2.125rem;
+    font-size: 2.75rem;
+    font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
