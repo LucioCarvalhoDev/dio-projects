@@ -60,6 +60,21 @@
     margin-bottom: 7px;
 }
 
+.m_banner_act_button:hover {
+    background: #fdfdfd;
+    color: black;
+    transition: 500ms;
+}
+
+.m_banner_act_button:focus {
+    outline: 1px solid white;
+}
+
+.m_banner_act_button:active {
+    outline: 2px solid white;
+    background: black;
+}
+
 @media screen and (min-width: 480px) {
     .m_banner_act {
         flex-direction: row;
