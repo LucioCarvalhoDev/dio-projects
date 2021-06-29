@@ -1,10 +1,11 @@
 .h {
     background: var(--black);
-    height: 3.25rem;
+    min-height: 3.25rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0px 20px 5px;
 }
 
 .h_logo {
@@ -28,4 +29,10 @@
 .h_nav_link:hover {
     color: white;
     cursor: pointer
+}
+
+@media screen and (min-width: 540px) {
+    .h {
+        flex-direction: row;
+    }
 }
