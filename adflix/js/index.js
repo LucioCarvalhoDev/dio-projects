@@ -6,9 +6,21 @@ window.addEventListener('load', function () {
         scrollLock: true,
         dragVelocity: 1.5,
         dots: '.dots',
-        // arrows: {
-        //     prev: '.glider-prev',
-        //     next: '.glider-next'
-        // }
+        responsive: [
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
     });
 })

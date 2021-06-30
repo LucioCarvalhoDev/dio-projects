@@ -8,12 +8,19 @@
 }
 
 .m_content_glider-container_glider_media {
-    width: 100vw !important;
-    height: 140vw !important;
-    border: none !important;
+    /* width: 50vw !important;
+    height: 70vw !important; */
     margin-right: 10px;
 }
 
 .m_content_glider-container_glider_media:last-child {
     margin-right: none;
 }
+
+/* @media screen and (min-width: 600px) {
+    .m_content_glider-container_glider_media {
+        width: 100vw !important;
+        height: 140vw !important;
+
+    }
+} */
