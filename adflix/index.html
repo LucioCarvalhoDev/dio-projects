@@ -13,11 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@500;900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="./lib/glider/glider.css">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/global.css">
 
     <link rel="stylesheet" href="css/header/header.css">
-    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/main/banner.css">
+    <link rel="stylesheet" href="css/main/content.css">
     <title>AddFlix</title>
 </head>
 
@@ -48,7 +51,24 @@
                 </button>
             </div>
         </section>
+        <section class="m_content">
+            <div class="m_content_glider-container">
+                <div class="m_content_glider-container_glider glider">
+                    <img class="m_content_glider-container_glider_media" src="./assets/img/ads/apple.png">
+                    </img>
+                    <img class="m_content_glider-container_glider_media" src="./assets/img/ads/mac-donald.jpg">
+                    </img>
+                    <img class="m_content_glider-container_glider_media" src="./assets/img/ads/nike-logo.jpg">
+                    </img>
+                    <img class="m_content_glider-container_glider_media" src="./assets/img/ads/pepsi.jpg">
+                    </img>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </section>
     </main>
+    <script src="./lib/glider/glider.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

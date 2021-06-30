@@ -1,7 +1,3 @@
-.m {
-    background: var(--dark)
-}
-
 .m_banner {
     position: relative;
     background: url('./../../assets/img/banner-coke-min.jpg');

@@ -7,8 +7,11 @@
     box-sizing: border-box;
 }
 
-b {
-    background: var(--black)
+body {
+    background: var(--black);
+    width: 100vw;
+    overflow-x: hidden;
+    margin-bottom: 10px;
 }
 
 .container {

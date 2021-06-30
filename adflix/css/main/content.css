@@ -1,0 +1,19 @@
+.m_content {
+    background: var(--black)
+}
+
+.m_content_glider-container {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.m_content_glider-container_glider_media {
+    width: 100vw !important;
+    height: 140vw !important;
+    border: none !important;
+    margin-right: 10px;
+}
+
+.m_content_glider-container_glider_media:last-child {
+    margin-right: none;
+}
