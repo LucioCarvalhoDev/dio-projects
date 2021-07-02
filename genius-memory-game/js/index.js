@@ -1,22 +1,23 @@
-const activeButton = (() => {
-    const audios = {};
-
-    return (e) => {
+const activeButton = async (e) => {
+    return new Promise((resolve, reject) => {
         // Adapta caso a chamada venha de evento
         // ou função
         const elem = e.target ? e.target : e;
         const name = elem.dataset.audio;
-        elem.classList.add('active');
-        if (audios[name] === undefined) {
-            audios[name] = new Audio(`./../assets/sounds/${name}.mp3`);
-            audios[name].onended = () => elem.classList.remove('active');
-        }
-        audios[name].pause();
-        audios[name].currentTime = 0;
-        audios[name].play();
-    };
 
-})();
+        const audio = new Audio(`./../assets/sounds/${name}.mp3`);
+        audio.addEventListener('ended', () => {
+            elem.classList.remove('active');
+            resolve('ok');
+        });
+
+        audio.pause();
+        audio.currentTime = 0;
+        elem.classList.add('active');
+        audio.play();
+    });
+
+};
 
 const red = document.getElementById("red");
 const green = document.getElementById("green");
@@ -32,18 +33,44 @@ const BUTTONS = [red, green, blue, yellow];
 const start = document.getElementById("start");
 
 function playAll(list) {
-    if (list === undefined)
-        list = BUTTONS.pick(5);
-    if (list.length === 0) return;
+    return new Promise((resolve, reject) => {
+        if (list == undefined)
+            list = BUTTONS.pick(4);
+        const promises = [];
 
-    const elem = list.splice(0, 1)[0];
-    activeButton(elem);
+        list.forEach((elem, i) => {
+            promises.push(play(elem, 500 * i));
+        });
 
-    setTimeout(() => {
-        return playAll(list);
-    }, 1000);
+        // resolve({ promises, list });
+        Promise.all(promises)
+            .then(res => {
+                resolve(list);
+            });
+
+    });
+
+};
+
+async function play(elem, t = 100) {
+    // activeButton(elem);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            activeButton(elem)
+                .then((res) => resolve(res))
+                .catch(err => {
+                    console.log('eeerrro');
+                });
+        }, t);
+    });
+    // return await activeButton(elem);
+
 }
 
-start.addEventListener('click', () => {
-    playAll();
+start.addEventListener('click', async (e) => {
+    // console.log(playAll());
+    playAll()
+        .then((list) => {
+            console.log(list);
+        });
 });

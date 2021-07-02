@@ -1,5 +1,5 @@
 body {
-    background: #444444;
+    background: #a7a7a7;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
     position: relative;
     width: 50vw;
     height: 50vw;
-    background-color: rgb(43, 37, 37);
+    background-color: rgb(20, 20, 20);
     border-radius: 50%;
     display: grid;
     grid-template-areas: 
@@ -37,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 9px solid rgb(43, 37, 37);
+    border: 9px solid rgb(20,20,20);
     background-color: rgb(58, 58, 58);
 }
 
@@ -73,20 +73,4 @@ body {
     grid-area: yellow;
     background-color: yellow;
     border-bottom-right-radius: 100%;
-}
-
-@keyframes blink {
-
-    0% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.6;
-    }
-
 }
