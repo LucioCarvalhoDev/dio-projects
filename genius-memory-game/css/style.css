@@ -1,0 +1,92 @@
+body {
+    background: #444444;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.memo {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    background-color: rgb(43, 37, 37);
+    border-radius: 50%;
+    display: grid;
+    grid-template-areas: 
+        "red green"
+        "blue yellow"
+    ;
+    padding: 20px;
+    gap: 10px;
+}
+
+.memo_start {
+    position: absolute;
+    top: calc(50% - 4.5vw);
+    left: calc(50% - 4.5vw);
+    z-index: 2;
+    width: 9vw;
+    height: 9vw;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 9px solid rgb(43, 37, 37);
+    background-color: rgb(58, 58, 58);
+}
+
+.memo_btn {
+    border: none;
+    opacity: .2;
+    cursor: pointer;
+}
+
+.active {
+    opacity: 1;
+}
+
+#red {
+    grid-area: red;
+    background-color: red;
+    border-top-left-radius: 100%;
+}
+
+#green {
+    grid-area: green;
+    background-color: green;
+    border-top-right-radius: 100%;
+}
+
+#blue {
+    grid-area: blue;
+    background-color: rgb(0, 60, 255);
+    border-bottom-left-radius: 100%;
+}
+
+#yellow {
+    grid-area: yellow;
+    background-color: yellow;
+    border-bottom-right-radius: 100%;
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+
+}
