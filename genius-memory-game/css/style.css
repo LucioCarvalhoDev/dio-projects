@@ -39,6 +39,11 @@ body {
     border-radius: 50%;
     border: 9px solid rgb(20,20,20);
     background-color: rgb(58, 58, 58);
+    cursor: pointer;
+}
+
+.memo_start:active {
+    background-color: tomato;
 }
 
 .memo_btn {
