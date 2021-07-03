@@ -23,9 +23,11 @@ class Controller {
 
         this.createLevel();
         console.log(this.game.sequence);
-        this.playAll(this.game.sequence);
+        this.playAll(this.game.sequence)
+            .then(() => {
+                this.phase = "input";
+            });
 
-        this.phase = "inputPhase";
     }
 
     createLevel() {
@@ -42,7 +44,7 @@ class Controller {
     getInput(event) {
         if (this.phase === "playing") return;
         if (this.phase === "idle") return;
-        if (this.phase === "inputPhase") {
+        if (this.phase === "input") {
             this.board.activeButton(this.board._buttons[event.target.id]);
             let leng = this.game.userSequence.push(event.target.id);
             if (leng === this.game.sequence.length) {

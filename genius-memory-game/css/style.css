@@ -50,13 +50,13 @@ body {
     border: none;
     opacity: .2;
     cursor: pointer;
-    -webkit-touch-callout: none;
+    /* -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; */
 }
 
 .noSelect {
@@ -66,6 +66,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .memo_btn:focus-visible {
