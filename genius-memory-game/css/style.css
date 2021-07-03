@@ -79,3 +79,23 @@ body {
     background-color: yellow;
     border-bottom-right-radius: 100%;
 }
+
+#msg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: gray;
+    padding: 30px 30px 30px 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom-left-radius: 50px;
+    animation: fade 4s forwards
+}
+
+@keyframes fade {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

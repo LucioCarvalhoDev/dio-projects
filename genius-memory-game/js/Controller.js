@@ -1,8 +1,9 @@
 class Controller {
     constructor() {
-        this.phase = "idle";
         this.board = new Board();
+        this.view = new View();
 
+        this.phase = "idle";
         this.level = 1;
 
         this.game = {};
@@ -54,16 +55,25 @@ class Controller {
         if (this.game.sequence.toString() === this.game.userSequence.toString()) {
             this.win();
         } else {
-            console.log("perdeu");
+            this.lose();
         }
+    }
+
+    write(str) {
+        this.view.write(str);
     }
 
     win() {
         //depois implementar o comando linux tbm
-        console.log("você conseguiu!");
         this.level++;
         this.phase = "idle";
-        // this.startGame();
+        this.write(`Você chegou ao nível ${this.level}!`);
+    }
+
+    lose() {
+        this.level = 1;
+        this.phase = "idle";
+        this.write(`Você perdeu, de volta para o nível 1!`);
     }
 
 }
