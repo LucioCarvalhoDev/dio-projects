@@ -45,12 +45,12 @@ class Board {
     return names;
   }
 
-  playAll(list) {
+  playAll(list, col = 1000) {
     return new Promise((resolve, reject) => {
       const promises = [];
 
       list.forEach((name, i) => {
-        promises.push(this.play(this._buttons[name], 1000 * i));
+        promises.push(this.play(this._buttons[name], col * i));
       });
 
       // resolve({ promises, list });

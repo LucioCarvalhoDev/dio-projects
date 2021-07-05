@@ -11,7 +11,7 @@ class Controller {
 
     playAll() {
         return new Promise((resolve, reject) => {
-            this.board.playAll(this.game.sequence)
+            this.board.playAll(this.game.sequence, this.game.speed)
                 .then(list => {
                     resolve(list);
                 });
@@ -32,8 +32,8 @@ class Controller {
 
     createLevel() {
         this.game = {
-            size: 2 + this.level,
-            speed: 1000,
+            size: 2 + Math.round(this.level / 2),
+            speed: this.level <= 8 ? 1500 - ((this.level - 1) * 100) : 800,
             sequence: [],
             userSequence: [],
         };
